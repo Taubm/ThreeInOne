@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <script type="text/javascript" src="jquery-2.0.3.js" ></script>
+    <script type="text/javascript">
+    <!--
+    $(function(){
+     
+          var 
+              btns_1 = $('div#panel_1 input:button'),
+              btnsParent_1 = btns_1.parent();
+              btns_2 = $('div#panel_2 input:button'),
+              btnsParent_2 = btns_2.parent();
+         
+          btns_1.click(function(e) {
+                  btnsParent_1.append(this);});
+          btns_2.click(function(e) {
+                  btnsParent_2.prepend(this);});
+
+    });
+    //-->
+    </script>
+  </head>
+  <body>
+    <div align=center>
+      <p>Нажатая в этом блоке кнопка переместится в начало.</p>
+      <div id=panel_2>
+        <input type="button" value=" 1 ">
+        <input type="button" value=" 2 ">
+        <input type="button" value=" 3 ">
+      </div>
+      <p>Нажатая в этом блоке кнопка переместится в конец.</p>
+      <div id=panel_1>
+        <input type="button" value=" 1 ">
+        <input type="button" value=" 2 ">
+        <input type="button" value=" 3 ">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+Ищем, используя id статусов фильмов.
+select genre.name, count(films_genre.genre_id) as col from genre join films_genre on films_genre.genre_id=genre.id where films_genre.film_id in (select id from films where status_id in (1,3)) group by genre.name;
+Или ищем, используя наименования статусов.
+select genre.name, count(films_genre.genre_id) as col from genre join films_genre on films_genre.genre_id=genre.id where films_genre.film_id in (select id from films where status_id in (select id from status where name in ('в прокате', 'скоро на экранах'))) group by genre.name;
